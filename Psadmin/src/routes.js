@@ -11,10 +11,10 @@ var routes = (
         <DefaultRoute handler={require("./components/homePage")} />
         <NotFoundRoute handler={require("./components/notFoundPage")} />
         <Route name="authorPage" handler={require("./components/authors/authorPage")} />
-        <Route name="about" handler={require("./components/about/aboutPage")} />
-        <Route name="authorBiography" handler={require("./components/authors/authorBiography")} />
+        <Route name="about" path="author" handler={require("./components/about/aboutPage")} />
+        <Route name="authorBiography" path="author/:id" handler={require("./components/authors/authorBiography")} />
+        <Route name="addAuthor" handler={require("./components/authors/manageAuthorPage")} />
     </Route>
 );
 
-//<Route name="authorBiography" path="/authorBiography/:authorId" handler={require("./components/authors/authorBiography")} />
 module.exports = routes;
