@@ -1,5 +1,5 @@
 import AuthorApi from "../api/mockAuthorApi";
-import * as types from "./actionTypes"
+import * as types from "./actionTypes";
 
 export function loadAuthorSuccess(authors){
   return {type: types.LOAD_AUTHORS_SUCCESS, authors};
@@ -10,7 +10,7 @@ export function loadAuthors() {
     return AuthorApi.getAllAuthors().then(authors => {
       dispatch(loadAuthorSuccess(authors));
     }).catch(error => {
-      throw(error)
+      throw(error);
     });
   };
 }
